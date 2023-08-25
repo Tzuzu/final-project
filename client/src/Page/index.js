@@ -3,7 +3,7 @@ import Login from './Login'
 import Recipes from './Recipes'
 import Cookbook from './Cookbook'
 import Home from './Home'
-// import './style.css'
+import './style.css'
 
 const Page = ({currentPage}) => {
     const renderPage = (page) => {
