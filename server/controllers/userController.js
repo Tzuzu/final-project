@@ -1,6 +1,3 @@
-// TODO
-// Login User / Create user / Create Recipe / Load Recipe / Load all recipes
-
 const { user } = require('../models');
 const { signToken } = require('../utils/auth');
 
