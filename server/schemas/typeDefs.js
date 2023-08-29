@@ -1,5 +1,5 @@
 const { gql } = require('apollo-server-express');
-const { Recipe } = require('../models');
+const { User, Recipe } = require('../models');
 
 const typeDefs = gql`
     type Recipe {
@@ -16,6 +16,12 @@ const typeDefs = gql`
         email: String
     }
 
+    type UserInput {
+        username: String
+        email: String
+        password: String
+    }
+
     input RecipeInput {
         name: String
         ingredients: [String]
@@ -26,8 +32,6 @@ const typeDefs = gql`
         token: ID
         user: User
     }
-
-   
 
     type Query {
         recipes: [Recipe]
