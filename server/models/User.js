@@ -27,7 +27,7 @@ const userSchema = new Schema(
         toJSON: {
             virtuals: true,
         },
-        id: false,
+       
     }
 );
 
@@ -48,4 +48,6 @@ userSchema.virtual('recipeCount').get(function () {
     return this.cookBooks.length;
 });
 
-module.exports = model('User', userSchema);
+const User = model('User', userSchema);
+
+module.exports = User;
