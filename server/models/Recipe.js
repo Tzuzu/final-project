@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
 
 const recipeSchema = new Schema({
     recipeId: {
@@ -20,6 +21,10 @@ const recipeSchema = new Schema({
         type: String,
         required: true,
     },
+    type: {
+        type: String,
+        required: true,
+    }
 });
 
 const Recipe = model('Recipe', recipeSchema);

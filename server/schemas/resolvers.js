@@ -22,10 +22,7 @@ const resolvers = {
         createRecipe: async (parent, { recipe }) => {
             return await Recipe.create(input);
         },
-        updateRecipe: async (parent, args, context) => {
-            const recipe = await Recipe.findByIdAndUpdate(args._id, args, { new: true });
-            return recipe;
-        },
+       
         saveRecipe: async (parent, { _id }, context) => {
             const recipe = await Recipe.findByIdAndUpdate(_id, { $set: { saved: true } }, { new: true });
             return recipe;
