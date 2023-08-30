@@ -7,13 +7,15 @@ const typeDefs = gql`
         name: String
         ingredients: [String]
         instructions: [String]
-        rating: Float
+        type: String
+        image: String
     }
 
     type User {
         _id: ID
         username: String
         email: String
+        password: String
     }
 
     type UserInput {
@@ -26,6 +28,8 @@ const typeDefs = gql`
         name: String
         ingredients: [String]
         instructions: [String]
+        type: String
+        image: String
     }  
     
     type AuthPayload {
@@ -41,7 +45,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        createUser(username: String, email: String, password: String): User
+        createUser(username: String, email: String, password: String): AuthPayload
         login(email: String, password: String): AuthPayload
         createRecipe(input: RecipeInput): Recipe
         saveRecipe(userId: ID, recipeId: ID): Recipe
