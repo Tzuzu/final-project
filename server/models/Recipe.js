@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
 const { Schema, model } = require('mongoose');
 
 const recipeSchema = new Schema({
@@ -20,6 +22,10 @@ const recipeSchema = new Schema({
         type: String,
         required: true,
     },
+    type: {
+        type: String,
+        required: true,
+    }
 });
 
 const Recipe = model('Recipe', recipeSchema);
