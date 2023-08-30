@@ -2,18 +2,14 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const recipeSchema = new Schema({
-    recipeId: {
+    ingredients: [{
         type: String,
         required: true,
-    },
-    ingredients: {
+    }],
+    instructions: [{
         type: String,
         required: true,
-    },
-    instructions: {
-        type: String,
-        required: true,
-    },
+    }],
     image: {
         type: String,
     },
