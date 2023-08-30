@@ -1,8 +1,11 @@
 import React from 'react'
 import Login from './Login'
-import Recipes from './Recipes'
 import Cookbook from './Cookbook'
 import Home from './Home'
+import Breakfast from './Breakfast'
+import Lunch from './Lunch'
+import Dinner from './Dinner'
+import Snacks from './Snacks'
 import './style.css'
 
 const Page = ({currentPage}) => {
@@ -12,8 +15,6 @@ const Page = ({currentPage}) => {
                 return <Cookbook />;
             case 'login':
                 return <Login />;
-            case 'recipes':
-                return <Recipes />;
             default:
                 return <Home />;
         }
