@@ -9,10 +9,11 @@ const resolvers = {
         },
     // really using parent as a filler for now
         recipe: async (parent, { _id }) => {
+            console.log("in recipe Query");
             return await Recipe.findById(_id);
         },
         users: async () => {
-            
+            console.log("in Users Query");
             const users = await User.find();
             console.log(users);
             return users;

@@ -5,10 +5,12 @@ const recipeSchema = new Schema({
     ingredients: [{
         type: String,
         required: true,
+        nullable: false,
     }],
     instructions: [{
         type: String,
         required: true,
+        nullable: false,
     }],
     image: {
         type: String,
@@ -16,10 +18,12 @@ const recipeSchema = new Schema({
     name: {
         type: String,
         required: true,
+        nullable: false,
     },
     type: {
         type: String,
         required: true,
+        nullable: false,
     }
 });
 
