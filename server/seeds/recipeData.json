@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "Fruit Smoothie",
+        "ingredients": ["Yogurt", "Choice of berries", "Banana"],
+        "instructions": ["Add all ingredients to a smoothie mixer", "Blend until well mixed"],
+        "type": "Breakfast"
+    },
+    {
+        "id": "2",
+        "name": "Grilled Cheese Sandwich",
+        "ingredients": ["2 Slices of bread", "Cheese", "Optional: Tomato"],
+        "instructions": ["Heat up a pan", "Place cheese between bread and fry on each side until well melted and toasted", "Optional: Add tomato to give more texture"],
+        "type": "Lunch"
+    },
+    {
+        "id": "3",
+        "name": "Salmon Caesar Salad",
+        "ingredients": ["Salmon", "Head of Lettuce", "Caesar Dressing", "Optional: Croutons"],
+        "instructions": ["Chop lettuce into a bowl and add the caesar dressing", "Cook your salmon with your preferred method (Stovetop, Grill, Air Fry)", "Place your salmon on top of the salad"],
+        "type": "Dinner"
+    },
+    {
+        "id": "4",
+        "name": "Fruit Salad",
+        "ingredients": ["Assorted Fruit"],
+        "instructions": ["Chop all of your fruit up into a bowl and mix well"],
+        "type": "Snacks"
+    }
+]
