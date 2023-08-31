@@ -1,4 +1,6 @@
 import React from 'react'
+import './style.css';
+
 
 const Home = () => {
     return( 
@@ -14,6 +16,7 @@ const Home = () => {
             <li>Breakfast</li>
             <li>Lunch</li>
             <li>Dinner</li>
+            <li>Dessert / Snacks</li>
         </ul>
     </div>
     </>

@@ -1,6 +1,6 @@
-const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
-
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
+const { hash, compare } = require('bcryptjs');
 const recipeSchema = require('./Recipe');
 
 const userSchema = new Schema(
@@ -20,7 +20,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        cookBooks: [recipeSchema],
+   
     },
 
     {
@@ -34,14 +34,14 @@ const userSchema = new Schema(
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
+        this.password = await hash(this.password, saltRounds);
     }
 
     next();
 });
 
 userSchema.methods.comparePassword = async function (password) {
-    return await bcrypt.compare(password, this.password);
+    return await compare(password, this.password);
 };
 
 userSchema.virtual('recipeCount').get(function () {
