@@ -3,8 +3,8 @@ const { Schema, model } = mongoose;
 const { hash, compare } = require('bcryptjs');
 const recipeSchema = require('./Recipe');
 
-const userSchema = new Schema(
-    {
+const userSchema = new Schema({
+    
         username: {
             type: String,
             required: true,
@@ -20,16 +20,14 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-   
-    },
-
-    {
-        toJSON: {
-            virtuals: true,
-        },
-       
-    }
-);
+        cookBooks: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Recipe',
+            },
+        ]
+    
+});
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
