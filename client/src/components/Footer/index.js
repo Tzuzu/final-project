@@ -1,10 +1,10 @@
-import React from 'react'
-// import './style.css'
+import React from 'react';
+import './style.css'; // Import your stylesheet if needed
 
 const Footer = () => {
     return (
-        <footer>Footer</footer>
-    )
+        <footer className="fixed-footer">Footer</footer>
+    );
 }
 
-export default Footer
+export default Footer;
