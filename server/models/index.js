@@ -1,4 +1,4 @@
-const User = require('./User').default;
-const Recipe = require('./Recipe').default;
+const User = require('./User');
+const Recipe = require('./Recipe');
 
 module.exports = { User, Recipe };
