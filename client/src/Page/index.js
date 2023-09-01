@@ -15,6 +15,14 @@ const Page = ({currentPage}) => {
                 return <Cookbook />;
             case 'login':
                 return <Login />;
+            case 'snacks':
+                return <Snacks />;
+            case 'breakfast':
+                return <Breakfast />;
+            case 'lunch':
+                return <Lunch />;
+            case 'dinner':
+                return <Dinner />;
             default:
                 return <Home />;
         }
