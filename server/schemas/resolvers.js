@@ -9,17 +9,21 @@ const resolvers = {
         },
     // really using parent as a filler for now
         recipe: async (parent, { _id }) => {
+            console.log("in recipe Query");
             return await Recipe.findById(_id);
         },
         users: async () => {
-            return await User.find();
+            console.log("in Users Query");
+            const users = await User.find();
+            console.log(users);
+            return users;
             },
         user: async (parent, { _id }) => {
             return await User.findById(_id);
         },
     },
     Mutation: {
-        createRecipe: async (parent, { recipe }) => {
+        createRecipe: async (parent, { input }) => {
             return await Recipe.create(input);
         },
        
@@ -43,7 +47,7 @@ const resolvers = {
               throw new AuthenticationError('Incorrect credentials');
             }
       
-            const correctPw = await user.isCorrectPassword(password);
+            const correctPw = await user.comparePassword(password);
       
             if (!correctPw) {
               throw new AuthenticationError('Incorrect credentials');
