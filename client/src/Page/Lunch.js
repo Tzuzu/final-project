@@ -6,7 +6,6 @@ import { useQuery } from '@apollo/client';
 const Lunch = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
     const recipeData = data?.recipes || [];
-    console.log(recipeData);
 
     const handleSavedRecipes = (recipe) => {
         const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
@@ -16,7 +15,7 @@ const Lunch = () => {
             savedRecipes.push(recipe);
             localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes))
         } else {
-            alert('Recipe already saved')
+            alert(`You've already saved this recipe!`)
         }
     }
     if (loading) {
