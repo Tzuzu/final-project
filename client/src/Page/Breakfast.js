@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { QUERY_RECIPES } from '../utils/queries';
 import { useQuery } from '@apollo/client';
+
+function RecipeCard({ recipe }) {
+    const [saved, setSaved] = useState(false);
+
+    const saveRecipeHandle = () => {
+    const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+
+    const isRecipeSaved = savedRecipes.some((savedRecipe) => savedRecipe._id === recipe._id)
+
+    if (!isRecipeSaved) {
+        savedRecipes.push(recipe);
+        localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+        setSaved(true)
+    } else {
+        alert('Recipe already saved!')
+    }
+    }
+}
+
+
 
 const Breakfast = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
@@ -27,6 +47,9 @@ const Breakfast = () => {
                     </ul>
                     <h3>Instructions</h3>
                     <p>{recipe.instructions}</p>
+                    <button onClick={saveRecipeHandle} disabled={saved}>
+                        {saved ? 'Saved' : 'Save Recipe' }
+                    </button>
                 </div>
             ))}
         </div>
