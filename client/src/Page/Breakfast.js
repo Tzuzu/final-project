@@ -21,10 +21,10 @@ const Breakfast = () => {
         }
     }
 
-    function Button() {
-        if (!Auth.loggedIn) {
+    function Button(recipe) {
+        if (!Auth.loggedIn()) {
           return null;
-        }
+        } 
         return <button onClick={() => handleSavedRecipes(recipe)}>
         <i class="fas fa-save"></i>
         </button>;
@@ -50,7 +50,7 @@ const Breakfast = () => {
                     </ul>
                     <h3>Instructions</h3>
                     <p>{recipe.instructions}</p>
-                    <Button />
+                    <Button loggedIn/>
                 </div>
             ))}
         </div>
