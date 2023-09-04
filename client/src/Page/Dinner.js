@@ -3,18 +3,40 @@ import './style.css';
 import { QUERY_RECIPES } from '../utils/queries';
 import { useQuery } from '@apollo/client';
 
+import Auth from '../utils/auth'
+
 const Dinner = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
     const recipeData = data?.recipes || [];
-    console.log(recipeData);
+
+    const handleSavedRecipes = (recipe) => {
+        const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+        const isRecipeSaved = savedRecipes.some((savedRecipe) => savedRecipe._id === recipe._id);
+
+        if (!isRecipeSaved) {
+            savedRecipes.push(recipe);
+            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes))
+        } else {
+            alert('Recipe already saved')
+        }
+    }
+
+    function Button(recipe) {
+        if (!Auth.loggedIn()) {
+          return null;
+        } 
+        return <button onClick={() => handleSavedRecipes(recipe)}>
+        <i class="fas fa-save"></i>
+        </button>;
+      }
+
     if (loading) {
         return <div>Loading...</div>;
     }
     return (
         <div>
             <h1>Dinner Recipes</h1>
-            <p>Need something light to hold you over til your next meal? Make a Dinner 
-                with one of these delicious recipes.</p>
+            <p>Find your next dinner meal before calling it a night.</p>
             {recipeData.filter((recipe ) => recipe.type === 'Dinner').map((recipe) => (
                 <div key={recipe._id}>
                     <h2>{recipe.name}</h2>
@@ -27,6 +49,7 @@ const Dinner = () => {
                     </ul>
                     <h3>Instructions</h3>
                     <p>{recipe.instructions}</p>
+                    <Button loggedIn/>
                 </div>
             ))}
         </div>
