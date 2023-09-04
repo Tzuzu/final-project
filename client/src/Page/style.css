@@ -1,3 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .footer-container {
   background-color: #333;
   color: #fff;
@@ -15,41 +20,123 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-image: url('./images/sandwich.jpg'); /* Replace 'your-image-path.jpg' with the path to your background image */
+  background-size: cover; /* Adjust the background image size as needed */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center; /* Center the background image */
 }
+
 
 .login-box {
   display: flex;
-  background-color: #acacac5e;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 900px;
 }
 
-.login-section, .signup-section {
+.login-section {
   flex: 1;
-  padding: 40px;
+  padding: 60px;
+  border-right: 2px solid #ccc;
 }
 
-.login-section h2, .signup-section h2 {
-  margin-bottom: 20px;
+.signup-section {
+  flex: 1;
+  padding: 60px;
+}
+
+.login-section h2,
+.signup-section h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .form-label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   font-weight: bold;
+  font-size: 16px;
+  color: #555;
 }
 
 .form-input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 18px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
 }
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* home page:) */
+.category-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100px; /* Adjust the image size as needed */
+  height: 100px; /* Adjust the image size as needed */
+  border-radius: 50%; /* Makes the image appear as a circle */
+  display: block;
+  margin: 0 auto;
+}
+
+.category-item p {
+  margin-top: 10px; /* Adjust the spacing between the image and text */
+}
+
 
 /* whatever is next :) */
