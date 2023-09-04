@@ -43,7 +43,7 @@ const typeDefs = gql`
         createUser(username: String, email: String, password: String): AuthPayload
         login(email: String, password: String): AuthPayload
         createRecipe(input: RecipeInput): Recipe
-        saveRecipe(recipe: ID!): Recipe
+        saveRecipe(_id: ID!): Recipe
     }
 `;
 
