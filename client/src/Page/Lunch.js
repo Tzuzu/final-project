@@ -3,9 +3,9 @@ import './style.css';
 import { QUERY_RECIPES } from '../utils/queries';
 import { useQuery } from '@apollo/client';
 
-import Auth from '../utils/auth'
+import Auth from '../utils/auth';
 
-const Snacks = () => {
+const Lunch = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
     const recipeData = data?.recipes || [];
 
@@ -25,11 +25,10 @@ const Snacks = () => {
     }
     return (
         <div>
-            <h1>Snacks Recipes</h1>
-            <p>Need something light to hold you over til your next meal? 
-                Make a snack with one of these delicious recipes.</p>
-            <div className="snack-container">
-                {recipeData.filter((recipe) => recipe.type === 'Snack').map((recipe) => (
+            <h1>Lunch Recipes</h1>
+            <p>Need help with your next mid-day meal? Hurry, come check out a recipe.</p>
+            <div className="lunch-container">
+                {recipeData.filter((recipe) => recipe.type === 'Lunch').map((recipe) => (
                     <div key={recipe._id} className="recipe-box">
                         <div className="recipe-content">
                             <h2>{recipe.name}</h2>
@@ -57,4 +56,4 @@ const Snacks = () => {
     );
 };
 
-export default Snacks;
+export default Lunch;
