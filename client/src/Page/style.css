@@ -1,43 +1,142 @@
-/* Login.css */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+/* having the login box in */
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  min-height: 100vh;
+  background-image: url('./images/sandwich.jpg'); /* Replace 'your-image-path.jpg' with the path to your background image */
+  background-size: cover; /* Adjust the background image size as needed */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center; /* Center the background image */
 }
+
 
 .login-box {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
 }
 
-.login-section,
+.login-section {
+  flex: 1;
+  padding: 60px;
+  border-right: 2px solid #ccc;
+}
+
 .signup-section {
-  margin-bottom: 20px;
+  flex: 1;
+  padding: 60px;
 }
 
-h2 {
-  margin: 0 0 10px;
-  font-size: 1.5rem;
+.login-section h2,
+.signup-section h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
 }
 
-p {
-  margin: 0;
-  color: #888;
-  font-size: 1rem;
+.form-group {
+  margin-bottom: 30px;
 }
 
-/* Style the links if needed */
-a {
-  color: #007bff;
-  text-decoration: none;
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
 }
 
-a:hover {
-  text-decoration: underline;
+.form-input {
+  width: 100%;
+  padding: 18px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
 }
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* home page:) */
+.category-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100px; /* Adjust the image size as needed */
+  height: 100px; /* Adjust the image size as needed */
+  border-radius: 50%; /* Makes the image appear as a circle */
+  display: block;
+  margin: 0 auto;
+}
+
+.category-item p {
+  margin-top: 10px; /* Adjust the spacing between the image and text */
+}
+
+
+/* whatever is next :) */
