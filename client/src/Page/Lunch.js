@@ -9,23 +9,11 @@ const Lunch = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
     const recipeData = data?.recipes || [];
 
-    const handleSavedRecipes = (recipe) => {
-        const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
-        const isRecipeSaved = savedRecipes.some((savedRecipe) => savedRecipe._id === recipe._id);
-
-        if (!isRecipeSaved) {
-            savedRecipes.push(recipe);
-            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes))
-        } else {
-            alert('Recipe already saved')
-        }
-    }
-
     function Button(recipe) {
         if (!Auth.loggedIn()) {
           return null;
         } 
-        return <button onClick={() => handleSavedRecipes(recipe)}>
+        return <button>
         <i class="fas fa-save"></i>
         </button>;
       }

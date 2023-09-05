@@ -19,3 +19,34 @@ mutation createUser($email: String!, $password: String!) {
         }
     }
 }`;
+
+export const SAVE_RECIPE = gql`
+mutation saveRecipe($id: ID!) {
+  saveRecipe(_id: $id) {
+    _id
+    cookBooks {
+      _id
+      name
+      image
+      ingredients
+      instructions
+      type
+    }
+    username
+    email
+  }
+}
+`;
+
+export const CREATE_RECIPE = gql`
+mutation createRecipe($input: RecipeInput) {
+  createRecipe(input: $input) {
+    _id
+    name
+    image
+    ingredients
+    instructions
+    type
+  }
+}
+`

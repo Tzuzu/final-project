@@ -35,7 +35,7 @@ const typeDefs = gql`
     type Query {
         recipes: [Recipe]
         recipe(_id: ID!): Recipe
-        user(username: String): User
+        user(_id: String): User
         users: [User]
     }
 
@@ -43,7 +43,7 @@ const typeDefs = gql`
         createUser(username: String, email: String, password: String): AuthPayload
         login(email: String, password: String): AuthPayload
         createRecipe(input: RecipeInput): Recipe
-        saveRecipe(_id: ID!): Recipe
+        saveRecipe(_id: ID!): User
     }
 `;
 
