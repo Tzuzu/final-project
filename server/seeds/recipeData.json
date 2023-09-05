@@ -28,7 +28,7 @@
         "name": "Chicken Wrap",
         "ingredients": "Grilled chicken, tortilla, lettuce, tomato, ranch dressing",
         "instructions": "Fill tortilla with ingredients, wrap, and enjoy.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/ChickenWrap.jpg",
         "type": "Lunch"
     },
     {
