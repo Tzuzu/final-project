@@ -9,7 +9,7 @@ const Dinner = () => {
     const { loading, data } = useQuery(QUERY_RECIPES);
     const recipeData = data?.recipes || [];
 
-    function Button(recipe) {
+    function Button() {
         if (!Auth.loggedIn()) {
           return null;
         } 
