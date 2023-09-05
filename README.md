@@ -26,7 +26,7 @@ Click the link to the website.
 
 Click on the different types of recipes (Breakfast, Lunch, etc.) to find the right recipe. 
 
-![website](./client/dist/assets/IMG.JPG)()
+![website](./client/assets/recipeSite)()
 
 ## Credits
 
