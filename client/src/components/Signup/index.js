@@ -13,12 +13,13 @@ const Signup = (props) => {
     try {
       const mutationResponse = await signup({
         variables: {
-          username: formState.email,
+          username: formState.username,
           email: formState.email,
           password: formState.password,
         },
       });
-      const token = mutationResponse.data.signup.token;
+      console.log(mutationResponse.data)
+      const token = mutationResponse.data.createUser.token;
       Auth.login(token);
     } catch (e) {
       console.error(e);
