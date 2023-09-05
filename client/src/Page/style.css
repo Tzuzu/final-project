@@ -1,0 +1,157 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+/* having the login box in */
+/* home page:) */
+.category-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100px; /* Adjust the image size as needed */
+  height: 100px; /* Adjust the image size as needed */
+  border-radius: 50%; /* Makes the image appear as a circle */
+  display: block;
+  margin: 0 auto;
+}
+
+.category-item p {
+  margin-top: 10px; /* Adjust the spacing between the image and text */
+}
+
+
+/* Dinner :) */
+/* Add this CSS to your style.css file */
+.Dinner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/sandwich.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.lunch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/lunch.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.breakfast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/breakfast.jpeg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.snack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/snack.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+.recipe-box {
+  flex-basis: calc(75% - 20px); /* Adjust the width of the recipe boxes to occupy 75% of the width with spacing included */
+  margin: 10px; /* Adjust the gap between recipe boxes to provide equal spacing */
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Align the recipe box content to the left by default */
+  border-radius: 10px; /* Add border-radius for rounded corners to the recipe box */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the recipe box */
+}
+/* ... Rest of your CSS styles for recipe boxes, recipes, and other elements ... */
+
+.recipe-left {
+  margin-right: 10px; /* Adjust the gap between recipes */
+  justify-content: flex-start; /* Align the recipe box content to the left */
+}
+
+.recipe-right {
+  margin-left: 10px; /* Adjust the gap between recipes */
+  justify-content: flex-end; /* Align the recipe box content to the right */
+}
+
+.recipe-content {
+  flex-grow: 1;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px; /* Add margin around the image and description */
+}
+
+.recipe-image {
+  flex-basis: 40%; /* Adjust the width of the image container */
+}
+
+.recipe-image img {
+  max-width: 100%; /* Ensure the image doesn't become oversized */
+  height: auto;
+}
+
+.recipe-description {
+  flex-grow: 1;
+}
+
+
+/* Add more styles as needed for buttons and other elements */
+
+/* whatever is next :) */
+/* Signin.css */
+.login-container {
+  background-image: url('./images/sandwich.jpg');
+  padding: 20px; /* Add padding to create space around the signin section */
+  /* Other styling for the signin section */
+}
+
+/* whatever is next :) */

@@ -1,0 +1,58 @@
+/* RecipeForm.css (or include these styles in your component) */
+
+/* Container styles */
+.recipe-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Header styles */
+.recipe-form-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form styles */
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form input styles */
+.recipe-form input[type="text"],
+.recipe-form textarea,
+.recipe-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.recipe-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Error message styles */
+.recipe-form .error-message {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+/* Optional: Add hover effect to the submit button */
+.recipe-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
