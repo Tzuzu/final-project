@@ -14,106 +14,6 @@ body, html {
   box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 /* having the login box in */
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url('./images/sandwich.jpg'); /* Replace 'your-image-path.jpg' with the path to your background image */
-  background-size: cover; /* Adjust the background image size as needed */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-position: center; /* Center the background image */
-}
-
-
-.login-box {
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 900px;
-}
-
-.login-section {
-  flex: 1;
-  padding: 60px;
-  border-right: 2px solid #ccc;
-}
-
-.signup-section {
-  flex: 1;
-  padding: 60px;
-}
-
-.login-section h2,
-.signup-section h2 {
-  margin-bottom: 30px;
-  font-size: 24px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 30px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #555;
-}
-
-.form-input {
-  width: 100%;
-  padding: 18px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s ease-in-out;
-}
-
-.form-input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.login-button {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 18px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.login-button:hover {
-  background-color: #0056b3;
-}
-
-.signup-button {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 18px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.signup-button:hover {
-  background-color: #0056b3;
-}
-
-
-
 /* home page:) */
 .category-list {
   list-style: none;
@@ -138,5 +38,120 @@ body, html {
   margin-top: 10px; /* Adjust the spacing between the image and text */
 }
 
+
+/* Dinner :) */
+/* Add this CSS to your style.css file */
+.Dinner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/sandwich.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.lunch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/lunch.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.breakfast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/breakfast.jpeg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.snack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/snack.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+.recipe-box {
+  flex-basis: calc(75% - 20px); /* Adjust the width of the recipe boxes to occupy 75% of the width with spacing included */
+  margin: 10px; /* Adjust the gap between recipe boxes to provide equal spacing */
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Align the recipe box content to the left by default */
+  border-radius: 10px; /* Add border-radius for rounded corners to the recipe box */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the recipe box */
+}
+/* ... Rest of your CSS styles for recipe boxes, recipes, and other elements ... */
+
+.recipe-left {
+  margin-right: 10px; /* Adjust the gap between recipes */
+  justify-content: flex-start; /* Align the recipe box content to the left */
+}
+
+.recipe-right {
+  margin-left: 10px; /* Adjust the gap between recipes */
+  justify-content: flex-end; /* Align the recipe box content to the right */
+}
+
+.recipe-content {
+  flex-grow: 1;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px; /* Add margin around the image and description */
+}
+
+.recipe-image {
+  flex-basis: 40%; /* Adjust the width of the image container */
+}
+
+.recipe-image img {
+  max-width: 100%; /* Ensure the image doesn't become oversized */
+  height: auto;
+}
+
+.recipe-description {
+  flex-grow: 1;
+}
+
+
+/* Add more styles as needed for buttons and other elements */
+
+/* whatever is next :) */
+/* Signin.css */
+.login-container {
+  background-image: url('./images/sandwich.jpg');
+  padding: 20px; /* Add padding to create space around the signin section */
+  /* Other styling for the signin section */
+}
 
 /* whatever is next :) */

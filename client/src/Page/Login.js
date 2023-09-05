@@ -1,15 +1,20 @@
-import React from 'react'
-import Signin from '../components/Signin'
-import Signup from '../components/Signup'
+import React from 'react';
+import Signup from '../components/Signup';
+import Signin from '../components/Signin';
 
 const Login = () => {
   return (
-    <div>
-      <div>
-        <Signup />
-        <Signin />
+    <div className="login-page">
+      <div className="login-container">
+        <div className="login-section">
+          <Signin />
+        </div>
+        <div className="signup-section">
+          <Signup />
+        </div>
       </div>
     </div>
-)}
-    
+  );
+};
+
 export default Login;
