@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import './style.css';
-import { LOGIN_USER } from './utils/mutations'; // Import your GraphQL mutation here
-import Auth from './utils/auth'; // Import your Auth component here
+import { LOGIN_USER } from '../utils/mutations'; // Import your GraphQL mutation here
+import Auth from '../utils/auth'; // Import your Auth component here
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
