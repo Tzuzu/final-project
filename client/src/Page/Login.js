@@ -1,39 +1,33 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { gql } from '@apollo/client';
+import Auth from '../utils/auth';
 import './style.css';
-
-const LOGIN_USER = gql`
-    mutation login($email: String!, $password: String!) {
-        login(email: $email, password: $password) {
-            token
-            user {
-                _id
-                username
-            }
-        }
-    }
-`;
+import { LOGIN_USER } from '../utils/mutations';
 
 const Login = (props) => {
-    const [formState, setFormState] = useState({ email: '', password: '' });
-    const [loginUser] = useMutation(LOGIN_USER);
+     const [formState, setFormState] = useState({ email: '', password: '' });
+     const [login, { error, data }] = useMutation(LOGIN_USER);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+     const handleFormSubmit = async (event) => {
+     event.preventDefault();
+     try {
+        const mutationResponse = await login({
+                variables: { email: formState.email, password: formState.password },
+              });
+              const token = mutationResponse.data.login.token;
+              Auth.login(token);
+            } catch (e) {
+              console.log(e);
+            }
+    };
 
-        try {
-            const { data } = await loginUser({ 
-                variables: { 
-                    email: formState.email, 
-                    password: formState.password 
-                } 
-            });
-            console.log('Login successful:', data);
-        } catch (error) {
-            console.error('Login error:', error);
-        }
-    }
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
 
     return (
         <div className="login-container">
@@ -41,26 +35,14 @@ const Login = (props) => {
                 <div className="login-section">
                     <h2>Login</h2>
                     <p>Have an account? Sign in here</p>
-                    <form onSubmit={ handleSubmit }>
+                     <form onSubmit={ handleFormSubmit }> 
                         <div>
                             <label htmlFor="email" className="form-label">Email</label>
-                                <input 
-                                type="email" 
-                                name="email" 
-                                placeholder="Email"
-                                value={ formState.email }
-                                onChange={(e) => setFormState({...formState, email: e.target.value })}
-                                />
+                                <input type="email" name="email" placeholder="Email" onChange={handleChange}/>
                         </div>
                         <div>
                             <label htmlFor="password" className="form-label">Password</label>
-                                <input 
-                                type="password" 
-                                name="password" 
-                                placeholder="Password"
-                                value={ formState.password }
-                                onChange={(e) => setFormState({...formState, password: e.target.value })}
-                                />
+                                <input type="password" name="password" placeholder="Password" onChange={handleChange}/>
                         </div>
                     </form>
                 </div>
@@ -70,19 +52,11 @@ const Login = (props) => {
                     <form>
                         <div>
                             <label htmlFor="email" className="form-label">Email</label>
-                                <input 
-                                type="email" 
-                                name="email" 
-                                placeholder="Email"
-                                />
+                                <input type="email" name="email" placeholder="Email"/>
                         </div>
                         <div>
                             <label htmlFor="password" className="form-label">Password</label>
-                                <input 
-                                type="password" 
-                                name="password" 
-                                placeholder="Password"
-                                />
+                                <input type="password" name="password" placeholder="Password"/>
                         </div>
                     </form>
                 </div>
