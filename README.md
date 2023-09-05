@@ -26,7 +26,7 @@ Click the link to the website.
 
 Click on the different types of recipes (Breakfast, Lunch, etc.) to find the right recipe. 
 
-![website](./client/dist/assets/IMG.JPG)()
+![website](./client/assets/recipeSite)(https://cryptic-caverns-15623-709b0723774a.herokuapp.com/)
 
 ## Credits
 
@@ -40,4 +40,4 @@ Kevin Verduzco
 
 ## Tests 
 
-No special tests required
+No, no special tests required
