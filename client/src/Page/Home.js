@@ -20,7 +20,7 @@ const Home = () => {
         <ul className="category-list">
           {/* Render each category as a CategoryItem */}
           <li>
-            <CategoryItem category="Breakfast" imageSrc="breakfast.jpg" />
+            <CategoryItem category="Breakfast" imageSrc="./images/breakfast.jepg" />
           </li>
           <li>
             <CategoryItem category="Lunch" imageSrc="lunch.jpg" />
