@@ -106,3 +106,11 @@ body, html {
 /* Add more styles as needed for buttons and other elements */
 
 /* whatever is next :) */
+/* Signin.css */
+.login-container {
+  background-image: url('./images/sandwich.jpg');
+  padding: 20px; /* Add padding to create space around the signin section */
+  /* Other styling for the signin section */
+}
+
+/* whatever is next :) */
