@@ -27,7 +27,7 @@ const Lunch = () => {
         <div>
             <h1>Lunch Recipes</h1>
             <p>Need something light to hold you over til your next meal? Make a snack with one of these delicious recipes.</p>
-            <div className="recipes-container">
+            <div className="lunch-container">
                 {recipeData.filter((recipe) => recipe.type === 'Lunch').map((recipe) => (
                     <div key={recipe._id} className="recipe-box">
                         <div className="recipe-content">

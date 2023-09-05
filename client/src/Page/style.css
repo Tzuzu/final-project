@@ -41,7 +41,7 @@ body, html {
 
 /* Dinner :) */
 /* Add this CSS to your style.css file */
-.recipes-container {
+.Dinner-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center the recipe boxes horizontally */
@@ -55,6 +55,47 @@ body, html {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
 
+.lunch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/lunch.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.breakfast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/breakfast.jpeg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.snack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the recipe boxes horizontally */
+  margin: 20px; /* Add margin to create space between the title and recipes */
+  background-image: url('./images/snack.jpg'); /* Replace 'path-to-your-background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to separate the content from the background */
+  border-radius: 10px; /* Add border-radius for rounded corners to the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
 .recipe-box {
   flex-basis: calc(75% - 20px); /* Adjust the width of the recipe boxes to occupy 75% of the width with spacing included */
   margin: 10px; /* Adjust the gap between recipe boxes to provide equal spacing */
