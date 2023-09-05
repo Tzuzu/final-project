@@ -6,10 +6,8 @@ const Login = () => {
   return (
     <div>
       <div>
-        <Signin />
-      </div>
-      <div>
         <Signup />
+        <Signin />
       </div>
     </div>
 )}
