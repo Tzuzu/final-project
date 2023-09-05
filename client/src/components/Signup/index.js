@@ -5,7 +5,7 @@ import Auth from '../../utils/auth';
 import './style.css';
 
 const Signup = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
   const [signup, { error, data }] = useMutation(CREATE_USER);
 
   const handleSignUp = async (event) => {
@@ -13,11 +13,13 @@ const Signup = (props) => {
     try {
       const mutationResponse = await signup({
         variables: {
+          username: formState.username,
           email: formState.email,
           password: formState.password,
         },
       });
-      const token = mutationResponse.data.signup.token;
+      console.log(mutationResponse.data)
+      const token = mutationResponse.data.createUser.token;
       Auth.login(token);
     } catch (e) {
       console.error(e);
@@ -36,6 +38,17 @@ const Signup = (props) => {
     <div className="signup-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
+      <div className="form-group">
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
+          <input
+            type="input"
+            name="username"
+            placeholder="Username"
+            onChange={handleChange}
+          />
+        </div>
         <div className="form-group">
           <label htmlFor="email" className="form-label">
             Email
@@ -44,7 +57,6 @@ const Signup = (props) => {
             type="email"
             name="email"
             placeholder="Email"
-            value={formState.email}
             onChange={handleChange}
           />
         </div>
@@ -56,7 +68,6 @@ const Signup = (props) => {
             type="password"
             name="password"
             placeholder="Password"
-            value={formState.password}
             onChange={handleChange}
           />
         </div>
