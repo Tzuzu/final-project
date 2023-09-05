@@ -19,7 +19,7 @@ const resolvers = {
             return users;
             },
         user: async (parent, { _id }) => {
-            return await User.findById(_id);
+            return await User.findById(_id).populate(`cookBooks`);
         },
     },
     Mutation: {
@@ -28,8 +28,13 @@ const resolvers = {
         },
        
         saveRecipe: async (parent, { _id }, context) => {
-            const recipe = await Recipe.findByIdAndUpdate(_id, { $set: { saved: true } }, { new: true });
-            return recipe;
+            console.log(_id);
+            if (context.user) {
+            const updatedUser = await User.findByIdAndUpdate({_id : context.user._id} , { $push: { cookBooks: _id } }, { new: true });
+            console.log(updatedUser);
+            return updatedUser.populate(`cookBooks`);
+            } 
+            throw new AuthenticationError ('You must be logged in to save a recipe');
         },
 
         createUser: async (parent, args) => {
@@ -54,7 +59,7 @@ const resolvers = {
             }
       
             const token = signToken(user);
-      
+            console.log(`tokenInLoginResolver`, token)
             return { token, user };
           }
     },

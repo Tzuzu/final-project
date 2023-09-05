@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
-const { hash, compare } = require('bcryptjs');
+const { hash, compare } = require('bcrypt');
 const recipeSchema = require('./Recipe');
 
 const userSchema = new Schema({

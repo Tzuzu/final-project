@@ -3,6 +3,7 @@ import './style.css';
 import CategoryItem from './CategoryItem'; // Import the CategoryItem component
 
 const Home = () => {
+
   return (
     <>
       <div>
