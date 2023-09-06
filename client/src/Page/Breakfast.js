@@ -34,7 +34,7 @@ const Breakfast = () => {
                             <h2>{recipe.name}</h2>
                             <div className="recipe-details">
                                 <div className="recipe-image">
-                                    <img src={recipe.imageUrl} alt={recipe.name} />
+                                    <img src={recipe.image} alt={recipe.name} />
                                 </div>
                                 <div className="recipe-description">
                                     <h3>Ingredients</h3>
