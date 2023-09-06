@@ -17,16 +17,16 @@ const Home = () => {
 
         <ul className="category-list">
           {/* Render each category as a CategoryItem */}
-          <li>
+          <li key="Breakfast">
             <CategoryItem category="Breakfast" imageSrc="./images/breakfast.jpeg" />
           </li>
-          <li>
+          <li key="Lunch">
             <CategoryItem category="Lunch" imageSrc="./images/lunch.jpg" />
           </li>
-          <li>
+          <li key="Dinner">
             <CategoryItem category="Dinner" imageSrc="./images/dinner.jpg" />
           </li>
-          <li>
+          <li key="Snacks">
             <CategoryItem category="Snacks" imageSrc="./images/snack.jpg" />
           </li>
         </ul>
