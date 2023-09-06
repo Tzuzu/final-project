@@ -3,11 +3,9 @@ import './style.css';
 import CategoryItem from './CategoryItem'; // Import the CategoryItem component
 
 const Home = () => {
-
   return (
     <>
       <div>
-        <i />
         <p>
           Welcome to everyone's cookbook! You may browse the site to find
           recipes you like, otherwise please check out your cookbook page to
@@ -20,16 +18,16 @@ const Home = () => {
         <ul className="category-list">
           {/* Render each category as a CategoryItem */}
           <li>
-            <CategoryItem category="Breakfast" imageSrc="./images/breakfast.jepg" />
+            <CategoryItem category="Breakfast" imageSrc="./images/breakfast.jpeg" />
           </li>
           <li>
-            <CategoryItem category="Lunch" imageSrc="lunch.jpg" />
+            <CategoryItem category="Lunch" imageSrc="./images/lunch.jpg" />
           </li>
           <li>
-            <CategoryItem category="Dinner" imageSrc="dinner.jpg" />
+            <CategoryItem category="Dinner" imageSrc="./images/dinner.jpg" />
           </li>
           <li>
-            <CategoryItem category="Snacks" imageSrc="snacks.jpg" />
+            <CategoryItem category="Snacks" imageSrc="./images/snack.jpg" />
           </li>
         </ul>
       </div>

@@ -55,7 +55,7 @@ const RecipeForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className="text-area-container">
           <h4>Ingredients</h4>
           <textarea
             name="recipeIngredients"
@@ -64,7 +64,7 @@ const RecipeForm = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        <div>
+        <div className="text-area-container">
           <h4>Instructions</h4>
           <textarea
             name="recipeInstructions"
