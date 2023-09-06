@@ -1,5 +1,7 @@
 # oven-mates
 
+![Munchable-Memoirs](demo.png)
+
 # Table of Contents
 - [Description](#description)
 - [Installation](#installation)
