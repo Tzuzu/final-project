@@ -3,9 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CategoryItem = ({ category, imageSrc }) => {
+const CategoryItem = ({ category, imageSrc , setCurrentPage}) => {
   return (
-    <div className="category-item">
+    <div className="category-item" onClick={() => setCurrentPage(category)}>
       <img src={imageSrc} alt={category} />
       <p>{category}</p>
     </div>
