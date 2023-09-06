@@ -29,7 +29,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const pages = ['home', 'login', 'cookbook', 'breakfast', 'lunch', 'dinner', 'snacks']
+const pages = ['home', 'login', 'cookbook']
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
