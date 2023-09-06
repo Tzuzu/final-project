@@ -15,6 +15,8 @@ body, html {
 }
 /* having the login box in */
 /* home page:) */
+
+
 .category-list {
   list-style: none;
   display: flex;
@@ -27,11 +29,12 @@ body, html {
 }
 
 .category-item img {
-  width: 100px; /* Adjust the image size as needed */
-  height: 100px; /* Adjust the image size as needed */
+  width: 300px; /* Adjust the image size as needed */
+  height: 300px; /* Adjust the image size as needed */
   border-radius: 50%; /* Makes the image appear as a circle */
   display: block;
   margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .category-item p {
@@ -40,7 +43,6 @@ body, html {
 
 
 /* Dinner :) */
-/* Add this CSS to your style.css file */
 .Dinner-container {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +109,6 @@ body, html {
   border-radius: 10px; /* Add border-radius for rounded corners to the recipe box */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the recipe box */
 }
-/* ... Rest of your CSS styles for recipe boxes, recipes, and other elements ... */
 
 .recipe-left {
   margin-right: 10px; /* Adjust the gap between recipes */
@@ -143,10 +144,6 @@ body, html {
   flex-grow: 1;
 }
 
-
-/* Add more styles as needed for buttons and other elements */
-
-/* whatever is next :) */
 /* Signin.css */
 .login-container {
   background-image: url('./images/sandwich.jpg');

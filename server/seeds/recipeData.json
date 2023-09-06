@@ -4,7 +4,7 @@
         "name": "Classic Pancakes",
         "ingredients": "Flour, milk, eggs, sugar, baking powder",
         "instructions": "Mix dry ingredients, add wet ingredients, cook on a griddle.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/Pancake.jpg",
         "type": "Breakfast"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Greek Yogurt Parfait",
         "ingredients": "Greek yogurt, granola, mixed berries, honey",
         "instructions": "Layer yogurt, granola, berries, and honey in a glass.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/yogurt.jpg",
         "type": "Breakfast"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Egg and Avocado Toast",
         "ingredients": "Bread, eggs, avocado, salt, pepper",
         "instructions": "Toast bread, cook eggs, assemble with avocado slices.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/toast.jpg",
         "type": "Breakfast"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Quinoa Salad",
         "ingredients": "Quinoa, cucumber, bell peppers, red onion, feta cheese",
         "instructions": "Cook quinoa, mix with chopped vegetables and feta.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/salad.jpg",
         "type": "Lunch"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Vegetable Sushi Rolls",
         "ingredients": "Sushi rice, nori sheets, cucumber, avocado, carrot",
         "instructions": "Spread rice on nori, add veggies, roll, and slice.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/sushi.jpg",
         "type": "Lunch"
     },
     {
@@ -52,7 +52,7 @@
         "name": "Spaghetti Bolognese",
         "ingredients": "Ground beef, spaghetti, tomato sauce, onion, garlic",
         "instructions": "Cook beef, add sauce, serve over cooked pasta.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/spaghetti.jpg",
         "type": "Dinner"
     },
     {
@@ -60,7 +60,7 @@
         "name": "Grilled Veggie Skewers",
         "ingredients": "Bell peppers, zucchini, mushrooms, onion, marinade",
         "instructions": "Thread veggies onto skewers, grill until charred.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/skewers.jpg",
         "type": "Dinner"
     },
     {
@@ -68,7 +68,7 @@
         "name": "Teriyaki Salmon",
         "ingredients": "Salmon fillet, teriyaki sauce, broccoli, rice",
         "instructions": "Marinate salmon, bake, serve with steamed broccoli and rice.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/salmon.jpg",
         "type": "Dinner"
     },
     {
@@ -76,7 +76,7 @@
         "name": "Homemade Trail Mix",
         "ingredients": "Almonds, cashews, dried cranberries, dark chocolate",
         "instructions": "Mix ingredients in a bowl, portion into snack bags.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/trailmix.jpg",
         "type": "Snack"
     },
     {
@@ -84,7 +84,7 @@
         "name": "Hummus and Veggies",
         "ingredients": "Hummus, baby carrots, cucumber, bell pepper",
         "instructions": "Slice veggies, dip in hummus, enjoy.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/hummas.jpg",
         "type": "Snack"
     },
     {
@@ -92,7 +92,7 @@
         "name": "Popcorn with Herbs",
         "ingredients": "Popcorn kernels, butter, dried herbs",
         "instructions": "Pop kernels, melt butter, toss with herbs.",
-        "image": "https://placeholder.image.url",
+        "image": "./images/popcorn.jpg",
         "type": "Snack"
     }
 ]
