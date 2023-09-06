@@ -8,7 +8,7 @@ import Dinner from './Dinner'
 import Snacks from './Snacks'
 import './style.css'
 
-const Page = ({currentPage}) => {
+const Page = ({currentPage, setCurrentPage}) => {
     const renderPage = (page) => {
         switch (page) {
             case 'cookbook':
@@ -24,7 +24,7 @@ const Page = ({currentPage}) => {
             case 'dinner':
                 return <Dinner />;
             default:
-                return <Home />;
+                return <Home setCurrentPage = {setCurrentPage}/>;
         }
     }
     return <section>

@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import CategoryItem from './CategoryItem'; // Import the CategoryItem component
 
-const Home = () => {
+const Home = ({setCurrentPage}) => {
   return (
     <>
       <div>
@@ -17,17 +17,17 @@ const Home = () => {
 
         <ul className="category-list">
           {/* Render each category as a CategoryItem */}
-          <li>
-            <CategoryItem category="Breakfast" imageSrc="./images/breakfast.jpeg" />
+          <li key="Breakfast">
+            <CategoryItem category="breakfast" imageSrc="./images/breakfast.jpeg" setCurrentPage={setCurrentPage} />
           </li>
-          <li>
-            <CategoryItem category="Lunch" imageSrc="./images/lunch.jpg" />
+          <li key="Lunch">
+            <CategoryItem category="lunch" imageSrc="./images/lunch.jpg" setCurrentPage={setCurrentPage}  />
           </li>
-          <li>
-            <CategoryItem category="Dinner" imageSrc="./images/dinner.jpg" />
+          <li key="Dinner">
+            <CategoryItem category="dinner" imageSrc="./images/dinner.jpg" setCurrentPage={setCurrentPage}  />
           </li>
-          <li>
-            <CategoryItem category="Snacks" imageSrc="./images/snack.jpg" />
+          <li key="Snacks">
+            <CategoryItem category="snacks" imageSrc="./images/snack.jpg" setCurrentPage={setCurrentPage}  />
           </li>
         </ul>
       </div>
